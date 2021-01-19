@@ -6,5 +6,14 @@
  */
 -->
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
-    <body/>
+    <body>
+        <referenceContainer name="page.wrapper">
+            <referenceContainer name="main">
+                <container name="main.container" htmlTag="div" htmlClass="main-container" before="main.content">
+                    <referenceBlock name="page.main.title" remove="true"/>
+                    <block class="Magento\Framework\View\Element\Template" name="main.banner.image" template="Magento_Cms::index.phtml"/>
+                </container>
+            </referenceContainer>
+        </referenceContainer>
+    </body>
 </page>

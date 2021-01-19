@@ -1,0 +1,52 @@
+<div class="primary-banner">
+    <?php
+    echo $this->getLayout()
+        ->createBlock('Magento\Cms\Block\Block')
+        ->setBlockId('homepage-banner')
+        ->toHtml();
+    ?>
+</div>
+<div class="show-welcome">
+    <div class="title">
+        <div class="welcome-logo">
+            <?php
+            echo $this->getLayout()
+                ->createBlock('Magento\Cms\Block\Block')
+                ->setBlockId('welcome-logo')
+                ->toHtml();
+            ?>
+        </div>
+        <p class="welcome">Welcome to MacDermind Connect</p>
+    </div>
+    <p class="select-store-title">
+        Please select a store before you begin
+    </p>
+    <div class="select-store">
+        <div class="euro">
+            <div class="eu-region">europe</div>
+            <div class="uk"><?php
+                echo $this->getLayout()
+                    ->createBlock('Magento\Cms\Block\Block')
+                    ->setBlockId('uk-store')
+                    ->toHtml();
+                ?></div>
+            <div class="eu"><?php
+                echo $this->getLayout()
+                    ->createBlock('Magento\Cms\Block\Block')
+                    ->setBlockId('eu-store')
+                    ->toHtml();
+                ?></div>
+        </div>
+        <div class="united-state">
+            <div class="us-region">united state</div>
+            <div class="us">
+                <?php
+                echo $this->getLayout()
+                    ->createBlock('Magento\Cms\Block\Block')
+                    ->setBlockId('us-store')
+                    ->toHtml();
+                ?>
+            </div>
+        </div>
+    </div>
+</div>
